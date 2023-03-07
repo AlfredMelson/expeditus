@@ -1,0 +1,250 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator zod {
+  provider      = "zod-prisma"
+  output        = "../src/server/zod"
+  relationModel = false
+}
+
+datasource db {
+  provider     = "mongodb"
+  url          = env("MONGODB_URI")
+  relationMode = "prisma"
+}
+
+model accounts {
+  id                String @id @default(auto()) @map("_id") @db.ObjectId
+  access_token      String
+  provider          String
+  providerAccountId String
+  scope             String
+  token_type        String
+  type              String
+  userId            String @db.ObjectId
+}
+
+model sessions {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  expires      DateTime @db.Date
+  sessionToken String
+  userId       String   @db.ObjectId
+}
+
+model users {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  email     String
+  image     String
+  location  String
+  name      String
+  username  String
+  verified  Boolean
+  createdAt DateTime @default(now())
+}
+
+model Profile {
+  id         String  @id @default(auto()) @map("_id") @db.ObjectId
+  email      String?
+  image      String
+  location   String
+  firstName  String
+  middleName String?
+  lastName   String
+  suffixName String?
+  username   String?
+  bio        String?
+
+  userId String @unique @db.ObjectId
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  comments       Comment[]
+  questions      Question[]
+  answers        Answer[]
+  shares         Share[]
+  ignoreAuthors  Ignore[]
+  sharedQnLinks  SharedQnLink[]
+  sharedTagLinks SharedTagLink[]
+}
+
+model SharedQnLink {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  url       String
+  slug      String   @unique
+  createdAt DateTime @default(now())
+
+  userId    String   @unique @db.ObjectId
+  profileID String?  @unique @db.ObjectId
+  profile   Profile? @relation(fields: [profileID], references: [id])
+
+  questionID String   @unique @db.ObjectId
+  question   Question @relation(fields: [questionID], references: [id])
+}
+
+model SharedTagLink {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  url       String
+  slug      String   @unique
+  createdAt DateTime @default(now())
+
+  profileID String?  @unique @db.ObjectId
+  profile   Profile? @relation(fields: [profileID], references: [id])
+
+  tagID String @unique @db.ObjectId
+  tag   Tag    @relation(fields: [tagID], references: [id])
+}
+
+model Question {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  zone      String
+  body      String
+  permalink String   @unique
+  published Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  usefulQn      UsefulQn[]
+  answers       Answer[]
+  likes         Like[]
+  watching      Watch[]
+  shares        Share[]
+  views         View[]
+  sharedQnLinks SharedQnLink[]
+
+  tagIDs   String[] @db.ObjectId
+  tags     Tag[]    @relation(fields: [tagIDs], references: [id])
+  authorID String   @unique @db.ObjectId
+  author   Profile  @relation(fields: [authorID], references: [id])
+}
+
+model Tag {
+  id   String @id @default(auto()) @map("_id") @db.ObjectId
+  name String
+
+  questionIDs String[]   @db.ObjectId
+  question    Question[] @relation(fields: [questionIDs], references: [id])
+
+  sharedTagLinks SharedTagLink[]
+}
+
+model Answer {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  body      String
+  published Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  comments Comment[]
+  likes    Like[]
+
+  questionID String   @unique @db.ObjectId
+  question   Question @relation(fields: [questionID], references: [id])
+
+  watching Watch[]
+  shares   Share[]
+
+  authorID String  @unique @db.ObjectId
+  author   Profile @relation(fields: [authorID], references: [id])
+}
+
+model Comment {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  body      String
+  published Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  answerID String @unique @db.ObjectId
+  answer   Answer @relation(fields: [answerID], references: [id])
+
+  likes Like[]
+
+  children Comment[] @relation("CommentChildren")
+  parent   Comment?  @relation("CommentChildren", fields: [parentID], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  parentID String    @unique @db.ObjectId
+
+  authorID String  @unique @db.ObjectId
+  author   Profile @relation(fields: [authorID], references: [id])
+}
+
+model UsefulQn {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  questionID String   @unique @db.ObjectId
+  question   Question @relation(fields: [questionID], references: [id])
+
+  userId String @unique @db.ObjectId
+
+  createdAt DateTime @default(now())
+}
+
+model Like {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  answerID String? @unique @db.ObjectId
+  answer   Answer? @relation(fields: [answerID], references: [id])
+
+  commentID String?  @unique @db.ObjectId
+  comment   Comment? @relation(fields: [commentID], references: [id])
+
+  questionID String?   @unique @db.ObjectId
+  question   Question? @relation(fields: [questionID], references: [id])
+
+  userId String @unique @db.ObjectId
+
+  createdAt DateTime @default(now())
+}
+
+model View {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  questionID String   @unique @db.ObjectId
+  question   Question @relation(fields: [questionID], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  userId String @unique @db.ObjectId
+
+  createdAt DateTime @default(now())
+}
+
+model Watch {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  answerID String? @unique @db.ObjectId
+  answer   Answer? @relation(fields: [answerID], references: [id])
+
+  questionID String?   @unique @db.ObjectId
+  question   Question? @relation(fields: [questionID], references: [id])
+
+  userId String @unique @db.ObjectId
+
+  createdAt DateTime @default(now())
+}
+
+model Share {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  answerID String? @unique @db.ObjectId
+  answer   Answer? @relation(fields: [answerID], references: [id])
+
+  questionID String?   @unique @db.ObjectId
+  question   Question? @relation(fields: [questionID], references: [id])
+
+  distributorID String  @unique @db.ObjectId
+  distributor   Profile @relation(fields: [distributorID], references: [id])
+
+  createdAt DateTime @default(now())
+}
+
+model Ignore {
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  snubbedID String @unique @db.ObjectId
+
+  snubID String  @unique @db.ObjectId
+  snub   Profile @relation(fields: [snubID], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

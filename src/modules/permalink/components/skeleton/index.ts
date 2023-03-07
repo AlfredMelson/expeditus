@@ -1,0 +1,6 @@
+export { default as PermalinkSkeleton } from './PermalinkSkeleton'
+export { default as PermalinkCardBodySkeleton } from './PermalinkCardBodySkeleton'
+export { default as PermalinkCardHeaderSkeleton } from './PermalinkCardHeaderSkeleton'
+export { default as PermalinkTitleSkeleton } from './PermalinkTitleSkeleton'
+export { default as MoreInlineSkeleton } from './MoreInlineSkeleton'
+export { default as MPermalinkSkeleton } from './MPermalinkSkeleton'
