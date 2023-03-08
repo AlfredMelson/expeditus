@@ -2,7 +2,6 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { FormProvider, useForm } from 'react-hook-form'
 import * as z from 'zod'
 
-import { AskQuestionAnswer } from '@modules/ask/components/answer'
 import { AskQuestionBody } from '@modules/ask/components/body'
 import { AskQuestionHeader } from '@modules/ask/components/header'
 import { AskQuestionLocation } from '@modules/ask/components/location'
@@ -85,7 +84,6 @@ export default function AskQuestionFormContainer() {
         <AskQuestionLocation />
         <AskQuestionBody />
         <TagsContainer />
-        <AskQuestionAnswer />
         <input type='submit' />
       </form>
     </FormProvider>

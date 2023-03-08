@@ -1,7 +1,7 @@
 import type { EmotionCache } from '@emotion/react'
 import type { NextPage } from 'next'
-import type { Session } from 'next-auth'
 import type { AppProps } from 'next/app'
+import type { Session } from 'next-auth'
 
 export type ExtendedPageProps = {
   requiresAuth?: boolean

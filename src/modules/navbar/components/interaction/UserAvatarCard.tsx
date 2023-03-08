@@ -9,8 +9,8 @@ import Divider from '@mui/material/Divider'
 import Stack from '@mui/material/Stack'
 import { useTheme } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
-import { signOut, useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
+import { signOut, useSession } from 'next-auth/react'
 
 import {
   userNameTypeConversion,

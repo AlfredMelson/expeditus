@@ -15,9 +15,9 @@ import Stack from '@mui/material/Stack'
 
 import Typography from '@mui/material/Typography'
 
+import { useRouter } from 'next/router'
 import { signOut, useSession } from 'next-auth/react'
 
-import { useRouter } from 'next/router'
 import { useSetRecoilState } from 'recoil'
 
 import { UserAvatarMobile } from '@modules/navbar/components/interaction'

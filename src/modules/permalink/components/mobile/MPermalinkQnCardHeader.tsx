@@ -12,8 +12,8 @@ import Typography from '@mui/material/Typography'
 
 import { format } from 'date-fns'
 
-import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
+import { useSession } from 'next-auth/react'
 
 import { MPermalinkAuthorCard } from '@modules/permalink/components/mobile'
 

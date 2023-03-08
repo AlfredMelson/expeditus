@@ -98,40 +98,41 @@ export const questionRouter = router({
       })
       return permalinkQuestion
     }),
-  addQuestion: protectedProcedure
-    .input(
-      z.object({
-        title: z.string(),
-        zone: z.string(),
-        body: z.string(),
-        tags: z.string().array(),
-      }),
-    )
-    .mutation(async ({ ctx, input }) => {
-      const { prisma, session } = ctx
-      const { body, title, zone } = input
-      const userId = session.user.id
-
-      const permalink = getPermaLink(title)
-
-      const published = true
-
-      const tagIDs: string[] = ['javascript', 'react', 'typescript']
-
-      return await prisma.question.create({
-        data: {
-          title,
-          zone,
-          body,
-          permalink,
-          published,
-          tagIDs,
-          author: {
-            connect: {
-              id: userId,
-            },
-          },
-        },
-      })
-    }),
 })
+
+// addQuestion: protectedProcedure
+//     .input(
+//       z.object({
+//         title: z.string(),
+//         zone: z.string(),
+//         body: z.string(),
+//         tags: z.string().array(),
+//       }),
+//     )
+//     .mutation(async ({ ctx, input }) => {
+//       const { prisma, session } = ctx
+//       const { body, title, zone } = input
+//       const userId = session.user.id
+
+//       const permalink = getPermaLink(title)
+
+//       const published = true
+
+//       const tagIDs: string[] = ['javascript', 'react', 'typescript']
+
+//       return await prisma.question.create({
+//         data: {
+//           title,
+//           zone,
+//           body,
+//           permalink,
+//           published,
+//           tagIDs,
+//           author: {
+//             connect: {
+//               id: userId,
+//             },
+//           },
+//         },
+//       })
+//     }),
