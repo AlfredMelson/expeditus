@@ -1,1 +1,1 @@
-export { default as AskQuestionBody } from './AskQuestionBody'
+export { default as AskPromptBody } from './AskPromptBody'

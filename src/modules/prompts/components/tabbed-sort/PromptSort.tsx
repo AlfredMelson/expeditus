@@ -6,24 +6,24 @@ import Tab from '@mui/material/Tab'
 import Tabs from '@mui/material/Tabs'
 import Link from 'next/link'
 
-import { SortInteresting } from '@modules/questions/components/tabbed-sort'
-import { ROUTES } from '@modules/questions/constants'
+import { SortInteresting } from '@modules/prompts/components/tabbed-sort'
+import { ROUTES } from '@modules/prompts/constants'
 
 // import dynamic from 'next/dynamic'
 // const DynamicSortInteresting = dynamic(
-//   import('@modules/questions/components/tabbed-sort/SortInteresting'),
+//   import('@modules/prompts/components/tabbed-sort/SortInteresting'),
 //   { suspense: true },
 // )
 // const DynamicSortMostRecent = dynamic(
-//   import('@modules/questions/components/tabbed-sort/SortMostRecent'),
+//   import('@modules/prompts/components/tabbed-sort/SortMostRecent'),
 //   { suspense: true },
 // )
 // const DynamicSortTrending = dynamic(
-//   import('@modules/questions/components/tabbed-sort/SortTrending'),
+//   import('@modules/prompts/components/tabbed-sort/SortTrending'),
 //   { suspense: true },
 // )
 // const DynamicSortMostViews = dynamic(
-//   import('@modules/questions/components/tabbed-sort/SortMostViews'),
+//   import('@modules/prompts/components/tabbed-sort/SortMostViews'),
 //   { suspense: true },
 // )
 
@@ -34,7 +34,7 @@ function a11yProps(index: number) {
   }
 }
 
-export default function QuestionSort() {
+export default function PromptSort() {
   const [value, setValue] = React.useState(0)
 
   const handleChange = (_event: React.SyntheticEvent, newValue: number) => {

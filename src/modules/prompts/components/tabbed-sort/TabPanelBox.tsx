@@ -3,7 +3,7 @@ import React from 'react'
 import Box from '@mui/material/Box'
 import { useSetRecoilState } from 'recoil'
 
-import { sortQuestionHoverIdAtom } from '@modules/questions/recoil'
+import { sortQuestionHoverIdAtom } from '@modules/prompts/recoil'
 
 interface ITabPanelBox {
   children: React.ReactNode

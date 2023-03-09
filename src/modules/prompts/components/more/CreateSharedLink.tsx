@@ -7,7 +7,7 @@ import { MuiButton } from '@modules/common/components/button'
 
 import { trpc } from '@src/utils/trpc'
 
-import type { CreateSharedQnLink } from '@modules/questions/types'
+import type { CreateSharedQnLink } from '@modules/prompts/types'
 
 export default function CreateSharedLink() {
   const {
@@ -74,7 +74,7 @@ export default function CreateSharedLink() {
       </div>
       <div>
         <label htmlFor='slug'>Custom slug:</label>
-        <p>https://auxilium.vercel.app/s/</p>
+        <p>https://Expeditus.vercel.app/s/</p>
         <div>
           <input
             id='slug'

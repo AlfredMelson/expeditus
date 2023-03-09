@@ -10,7 +10,7 @@ import { styled } from '@mui/material/styles'
 
 import { MTagCardActionsList } from '@modules/common/components/tag-drawer'
 import { CapitalizeTag } from '@modules/common/func'
-import { MListItemTextSx } from '@modules/questions/components/mui'
+import { MListItemTextSx } from '@modules/prompts/components/mui'
 
 import type { AccordionProps } from '@mui/material/Accordion'
 import type { AccordionSummaryProps } from '@mui/material/AccordionSummary'

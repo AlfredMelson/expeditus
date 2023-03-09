@@ -3,11 +3,13 @@ import React from 'react'
 import { useTheme, useMediaQuery } from '@mui/material'
 import Box from '@mui/material/Box'
 
-import { AskQuestionFormContainer } from '@modules/ask/components/container'
-import { DraftQuestionAccordion, MoreLinksButton } from '@modules/ask/components/sidebar'
+import { AskPromptFormContainer } from '@modules/ask/components/container'
+import {
+  DraftQuestionAccordion,
+  MoreLinksButton,
+  SavedPrompts,
+} from '@modules/ask/components/sidebar'
 import { PrimaryContainer } from '@modules/common/components/container'
-
-import SavedQuestions from '../sidebar/SavedQuestions'
 
 export default function AskPageLayoutContainer() {
   const frame = React.useRef<null | HTMLDivElement>(null)
@@ -39,7 +41,7 @@ export default function AskPageLayoutContainer() {
 
   return (
     <PrimaryContainer
-      left={<AskQuestionFormContainer />}
+      left={<AskPromptFormContainer />}
       rightRef={frame}
       right={
         <Box
@@ -50,7 +52,7 @@ export default function AskPageLayoutContainer() {
           <>
             {isSmUp && (
               <>
-                <SavedQuestions />
+                <SavedPrompts />
                 <DraftQuestionAccordion />
                 <MoreLinksButton />
               </>

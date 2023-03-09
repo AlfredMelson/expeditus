@@ -18,7 +18,7 @@ import Tooltip from '@mui/material/Tooltip'
 import { useRecoilValue } from 'recoil'
 
 import { ROUTES } from '@modules/permalink/constants'
-import { sortQuestionHoverIdAtom } from '@modules/questions/recoil'
+import { sortQuestionHoverIdAtom } from '@modules/prompts/recoil'
 
 import ShareLinkDialog from './ShareLinkDialog'
 

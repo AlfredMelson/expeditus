@@ -6,7 +6,7 @@ import { SvgLogo } from '@modules/navbar/components/logo'
 
 export default function LogoDesktop() {
   return (
-    <Tooltip title='Auxilium' placement='bottom'>
+    <Tooltip title='Expeditus' placement='bottom'>
       <Link href='/'>
         <SvgLogo
           sx={{

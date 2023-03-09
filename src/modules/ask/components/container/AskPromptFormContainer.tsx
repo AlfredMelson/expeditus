@@ -2,7 +2,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { FormProvider, useForm } from 'react-hook-form'
 import * as z from 'zod'
 
-import { AskQuestionBody } from '@modules/ask/components/body'
+import { AskPromptBody } from '@modules/ask/components/body'
 import { AskQuestionHeader } from '@modules/ask/components/header'
 import { AskQuestionLocation } from '@modules/ask/components/location'
 import { TagsContainer } from '@modules/ask/components/tags'
@@ -10,7 +10,7 @@ import { AskQuestionTitle } from '@modules/ask/components/title'
 
 // import { DevTool } from '@hookform/devtools'
 
-export default function AskQuestionFormContainer() {
+export default function AskPromptFormContainer() {
   // const router = useRouter()
 
   // const { mutate } = trpc.question.addQuestion.useMutation({
@@ -82,7 +82,7 @@ export default function AskQuestionFormContainer() {
         <AskQuestionHeader />
         <AskQuestionTitle />
         <AskQuestionLocation />
-        <AskQuestionBody />
+        <AskPromptBody />
         <TagsContainer />
         <input type='submit' />
       </form>

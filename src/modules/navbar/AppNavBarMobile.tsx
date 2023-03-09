@@ -11,7 +11,7 @@ import { useRecoilValue, useSetRecoilState } from 'recoil'
 
 import { MCommunityDrawer, MProfileDrawer } from '@modules/navbar/components/drawer'
 import { ElevationScroll, ScrollTop } from '@modules/navbar/func'
-import { sortQuestionTabIdAtom } from '@modules/questions/recoil'
+import { sortQuestionTabIdAtom } from '@modules/prompts/recoil'
 
 import { signupBenefitsDialogAtom } from './recoil'
 

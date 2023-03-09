@@ -5,14 +5,14 @@ import { motion } from 'framer-motion'
 
 import { useSetRecoilState } from 'recoil'
 
-import { summaryContainer, summaryItem } from '@modules/questions/animation'
-import { MSummary, MSummarySkeleton } from '@modules/questions/components/summary'
+import { summaryContainer, summaryItem } from '@modules/prompts/animation'
+import { MSummary, MSummarySkeleton } from '@modules/prompts/components/summary'
 
-import { MTabPanel, MTabPanelBox } from '@modules/questions/components/tabbed-sort'
-import { summaryDataStatusAtom } from '@modules/questions/recoil'
+import { MTabPanel, MTabPanelBox } from '@modules/prompts/components/tabbed-sort'
+import { summaryDataStatusAtom } from '@modules/prompts/recoil'
 import { trpc } from '@src/utils/trpc'
 
-// import { useIsIntersecting } from '@modules/questions/hooks'
+// import { useIsIntersecting } from '@modules/prompts/hooks'
 
 interface IMSortInteresting {
   index: number

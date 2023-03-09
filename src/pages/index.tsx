@@ -4,7 +4,7 @@ import { useMediaQuery, useTheme } from '@mui/material'
 import Head from 'next/head'
 
 import { Layout } from '@modules/layout'
-import { QuestionsContainer, MQuestionsContainer } from '@modules/questions/components/container'
+import { PromptsContainer, MPromptsContainer } from '@modules/prompts/components/container'
 
 import type { NextPageWithLayout } from '@src/types'
 
@@ -29,29 +29,29 @@ import type { NextPageWithLayout } from '@src/types'
 //   }
 // }
 
-export function QuestionsContent() {
+export function PromptsContent() {
   const theme = useTheme()
   const isSmUp = useMediaQuery(theme.breakpoints.up('sm'))
 
   return (
     <>
       <Head>
-        <title>Auxilium</title>
-        <meta name='description' content='Auxilium' />
+        <title>Expeditus</title>
+        <meta name='description' content='Expeditus' />
         <meta name='viewport' content='initial-scale=1, width=device-width' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      {isSmUp ? <QuestionsContainer /> : <MQuestionsContainer />}
+      {isSmUp ? <PromptsContainer /> : <MPromptsContainer />}
     </>
   )
 }
 
-const Questions: NextPageWithLayout = () => {
-  return <QuestionsContent />
+const Prompts: NextPageWithLayout = () => {
+  return <PromptsContent />
 }
 
-Questions.getLayout = function getLayout(page: ReactElement) {
+Prompts.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>
 }
 
-export default Questions
+export default Prompts

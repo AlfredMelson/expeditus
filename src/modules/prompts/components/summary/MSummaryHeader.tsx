@@ -10,8 +10,8 @@ import Typography from '@mui/material/Typography'
 import { format } from 'date-fns'
 import { useSession } from 'next-auth/react'
 
-import { MAuthorCard } from '@modules/questions/components/author'
-import { MSummaryMoreAuthor } from '@modules/questions/components/summary'
+import { MAuthorCard } from '@modules/prompts/components/author'
+import { MSummaryMoreAuthor } from '@modules/prompts/components/summary'
 
 interface IMSummaryHeader {
   username: string | null | undefined

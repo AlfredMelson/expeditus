@@ -3,7 +3,7 @@ import TextField from '@mui/material/TextField'
 import Typography from '@mui/material/Typography'
 import { useFormContext } from 'react-hook-form'
 
-export default function AskQuestionBody() {
+export default function AskPromptBody() {
   const { register } = useFormContext()
 
   return (

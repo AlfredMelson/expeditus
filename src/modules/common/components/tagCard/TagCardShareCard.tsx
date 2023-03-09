@@ -96,7 +96,7 @@ export default function TagCardShareCard({ tagName, handleClose }: ITagCardShare
             transition={{ duration: 0.4 }}>
             <MenuItem
               divider
-              onClick={() => copyToClipboard(`https://auxilium.vercel.app/s/${slug}`)}>
+              onClick={() => copyToClipboard(`https://Expeditus.vercel.app/s/${slug}`)}>
               <ListItemIcon>
                 <LinkIcon fontSize='small' />
               </ListItemIcon>

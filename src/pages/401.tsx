@@ -22,8 +22,8 @@ export function Error401Content() {
   return (
     <>
       <Head>
-        <title>Auxilium</title>
-        <meta name='description' content='Auxilium' />
+        <title>Expeditus</title>
+        <meta name='description' content='Expeditus' />
         <meta name='viewport' content='initial-scale=1, width=device-width' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
@@ -34,8 +34,7 @@ export function Error401Content() {
           flexDirection: 'column',
           alignItems: 'center',
           textAlign: 'center',
-        }}
-      >
+        }}>
         <BoxWrapper>
           <Typography variant='h1'>401</Typography>
           <Typography variant='h5' sx={{ mb: 1 }}>

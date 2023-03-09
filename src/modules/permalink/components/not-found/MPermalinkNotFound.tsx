@@ -15,8 +15,8 @@ export default function MPermalinkNotFound({ headTitle = 'title' }: IMPermalinkN
   return (
     <>
       <Head>
-        <title>Auxilium: {headTitle} question not found</title>
-        <meta name='description' content='Auxilium' />
+        <title>Expeditus: {headTitle} question not found</title>
+        <meta name='description' content='Expeditus' />
         <meta name='viewport' content='initial-scale=1, width=device-width' />
         <link rel='icon' href='/favicon.ico' />
       </Head>

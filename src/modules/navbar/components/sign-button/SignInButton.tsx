@@ -17,7 +17,7 @@ export default function SignInButton({ sx }: ISignInButton) {
       return 'http://localhost:3000'
     }
 
-    return 'https://auxilium.vercel.app/'
+    return 'https://Expeditus.vercel.app/'
   }
 
   return (

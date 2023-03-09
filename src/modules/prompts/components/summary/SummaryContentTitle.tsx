@@ -4,8 +4,8 @@ import { useTheme } from '@mui/material/styles'
 import { useSetRecoilState } from 'recoil'
 
 import { MuiButton } from '@modules/common/components/button'
-import { More } from '@modules/questions/components/more'
-import { sortQuestionHoverIdAtom } from '@modules/questions/recoil'
+import { More } from '@modules/prompts/components/more'
+import { sortQuestionHoverIdAtom } from '@modules/prompts/recoil'
 
 interface ISummaryContentTitle {
   title: string

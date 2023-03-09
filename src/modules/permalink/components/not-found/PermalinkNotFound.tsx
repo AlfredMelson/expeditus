@@ -22,8 +22,8 @@ export default function PermalinkNotFound({ headTitle = 'title' }: IPermalinkNot
   return (
     <>
       <Head>
-        <title>Auxilium: {headTitle} question not found</title>
-        <meta name='description' content='Auxilium' />
+        <title>Expeditus: {headTitle} question not found</title>
+        <meta name='description' content='Expeditus' />
         <meta name='viewport' content='initial-scale=1, width=device-width' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
@@ -35,8 +35,7 @@ export default function PermalinkNotFound({ headTitle = 'title' }: IPermalinkNot
             flexDirection: 'column',
             alignItems: 'center',
             textAlign: 'center',
-          }}
-        >
+          }}>
           <BoxWrapper>
             <Typography variant='h4'>Page not found</Typography>
             <Typography variant='h5' sx={{ mb: 3 }}>

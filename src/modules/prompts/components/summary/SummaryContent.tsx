@@ -1,6 +1,6 @@
 import Stack from '@mui/material/Stack'
 
-import { SummaryContentTags, SummaryContentTitle } from '@modules/questions/components/summary'
+import { SummaryContentTags, SummaryContentTitle } from '@modules/prompts/components/summary'
 
 interface ISummaryContent {
   title: string

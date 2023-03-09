@@ -5,7 +5,7 @@ export const TEXT = {
     { text: 'Visited', value: 'visited' },
     { text: 'Vilnius, Lithuania', value: 'cityCountry' },
   ],
-  SIGNUP_BENEFITS_PRIMARY: [{ text: 'Get the most out of Auxilium by signing in.' }],
+  SIGNUP_BENEFITS_PRIMARY: [{ text: 'Get the most out of Expeditus by signing in.' }],
   SIGNUP_BENEFITS_SECONDARY: [
     { text: 'Follow sources & topics to see more of them' },
     { text: 'See news related to your interests in For You' },

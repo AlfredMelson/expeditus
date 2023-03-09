@@ -22,8 +22,8 @@ const Error404Content = () => {
   return (
     <>
       <Head>
-        <title>Auxilium</title>
-        <meta name='description' content='Auxilium' />
+        <title>Expeditus</title>
+        <meta name='description' content='Expeditus' />
         <meta name='viewport' content='initial-scale=1, width=device-width' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
@@ -34,8 +34,7 @@ const Error404Content = () => {
           flexDirection: 'column',
           alignItems: 'center',
           textAlign: 'center',
-        }}
-      >
+        }}>
         <BoxWrapper>
           <Typography variant='h1'>404</Typography>
           <Typography variant='h5' sx={{ mb: 1, fontSize: '1.5rem !important' }}>

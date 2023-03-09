@@ -94,7 +94,7 @@ export default function ShareQuestionCard({ title, handleClose }: IShareQuestion
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}>
-            <MenuItem onClick={() => copyToClipboard(`https://auxilium.vercel.app/s/${slug}`)}>
+            <MenuItem onClick={() => copyToClipboard(`https://Expeditus.vercel.app/s/${slug}`)}>
               <ListItemIcon>
                 <LinkIcon fontSize='small' />
               </ListItemIcon>

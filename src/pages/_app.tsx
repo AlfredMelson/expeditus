@@ -23,7 +23,7 @@ interface AppPropsWithLayout extends ExtendedAppProps {
   Component: NextPageWithLayout
 }
 
-const Auxilium = (props: AppPropsWithLayout) => {
+const Expeditus = (props: AppPropsWithLayout) => {
   const { Component, emotionCache = clientSideEmotionCache, session, pageProps } = props
 
   const router = useRouter()
@@ -52,4 +52,4 @@ const Auxilium = (props: AppPropsWithLayout) => {
 }
 
 // add 'withTRPC()' HOC
-export default trpc.withTRPC(Auxilium)
+export default trpc.withTRPC(Expeditus)

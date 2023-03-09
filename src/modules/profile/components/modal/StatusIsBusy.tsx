@@ -41,7 +41,7 @@ export default function StatusIsBusy() {
       />
       <Box sx={{ mx: '20px', maxWidth: '320px' }}>
         <Typography variant='body1'>
-          When others mention you, assign you, or request your review, Auxilium will let them know
+          When others mention you, assign you, or request your review, Expeditus will let them know
           that you have limited availability.
         </Typography>
       </Box>

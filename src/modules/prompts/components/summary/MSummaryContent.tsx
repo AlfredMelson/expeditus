@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography'
 import Link from 'next/link'
 import { useSession } from 'next-auth/react'
 
-import { truncateText } from '@modules/questions/func'
+import { truncateText } from '@modules/prompts/func'
 import { trpc } from '@src/utils/trpc'
 
 type MSummaryContent = {

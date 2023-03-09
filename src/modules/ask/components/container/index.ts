@@ -1,2 +1,2 @@
 export { default as AskPageLayoutContainer } from './AskPageLayoutContainer'
-export { default as AskQuestionFormContainer } from './AskQuestionFormContainer'
+export { default as AskPromptFormContainer } from './AskPromptFormContainer'

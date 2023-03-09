@@ -10,7 +10,7 @@ import ListItemIcon from '@mui/material/ListItemIcon'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 
-import { MListItemTextSx } from '@modules/questions/components/mui'
+import { MListItemTextSx } from '@modules/prompts/components/mui'
 
 interface IMSummaryMoreAuthor {
   username: string | null | undefined

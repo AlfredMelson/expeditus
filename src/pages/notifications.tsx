@@ -13,7 +13,7 @@ const NotificationsContent = () => {
   return (
     <>
       <Head>
-        <title>Auxilium | Notifications</title>
+        <title>Expeditus | Notifications</title>
       </Head>
       <Box
         component='main'

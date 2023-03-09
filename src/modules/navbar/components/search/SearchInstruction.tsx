@@ -143,7 +143,7 @@ export default function SearchInstruction({ children }: ISearchInstruction) {
                 sx={{ mt: 2, mx: 1 }}>
                 <MuiButton
                   buttonVariant='text'
-                  buttonText='Ask a Question'
+                  buttonText='Prompt AI'
                   buttonLink='/ask'
                   startIcon={<CellTowerIcon />}
                 />

@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion'
 
-import { summaryContainer, summaryItem } from '@modules/questions/animation'
-import { Summary, SummarySkeleton } from '@modules/questions/components/summary'
+import { summaryContainer, summaryItem } from '@modules/prompts/animation'
+import { Summary, SummarySkeleton } from '@modules/prompts/components/summary'
 
-import { TabPanel, TabPanelBox } from '@modules/questions/components/tabbed-sort'
+import { TabPanel, TabPanelBox } from '@modules/prompts/components/tabbed-sort'
 import { trpc } from '@src/utils/trpc'
 
-// import { useIsIntersecting } from '@modules/questions/hooks'
+// import { useIsIntersecting } from '@modules/prompts/hooks'
 
 interface ISortInteresting {
   index: number

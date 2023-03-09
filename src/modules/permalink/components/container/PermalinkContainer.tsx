@@ -42,8 +42,8 @@ export default function PermalinkContainer({ headTitle = 'title' }: IPermalinkCo
   return (
     <>
       <Head>
-        <title>Auxilium : {headTitle}</title>
-        <meta name='description' content='Auxilium' />
+        <title>Expeditus : {headTitle}</title>
+        <meta name='description' content='Expeditus' />
         <meta name='viewport' content='initial-scale=1, width=device-width' />
         <link rel='icon' href='/favicon.ico' />
       </Head>

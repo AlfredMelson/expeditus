@@ -1,6 +1,6 @@
 import Stack from '@mui/material/Stack'
 
-import { MStatsTypographySx } from '@modules/questions/components/mui'
+import { MStatsTypographySx } from '@modules/prompts/components/mui'
 
 interface IMSummaryStats {
   views: number

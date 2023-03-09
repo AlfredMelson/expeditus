@@ -1,4 +1,4 @@
-export { default as QuestionSort } from './QuestionSort'
+export { default as PromptSort } from './PromptSort'
 export { default as SortInteresting } from './SortInteresting'
 export { default as TabPanel } from './TabPanel'
 export { default as TabPanelBox } from './TabPanelBox'

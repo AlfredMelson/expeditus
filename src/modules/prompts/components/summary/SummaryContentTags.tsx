@@ -8,7 +8,7 @@ import Stack from '@mui/material/Stack'
 
 import { TagCard } from '@modules/common/components/tagCard'
 
-import { SummaryContentTagsSkeleton } from '@modules/questions/components/summary'
+import { SummaryContentTagsSkeleton } from '@modules/prompts/components/summary'
 import { trpc } from '@src/utils/trpc'
 
 interface ISummaryContentTags {

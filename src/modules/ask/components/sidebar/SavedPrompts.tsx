@@ -14,7 +14,7 @@ import Typography from '@mui/material/Typography'
 
 import { MuiExpandButton } from '@modules/common/components/button'
 
-export default function SavedQuestions() {
+export default function SavedPrompts() {
   const [cardExpansion, setCardExpansion] = React.useState<boolean>(false)
 
   const handleCardExpansion = () => {

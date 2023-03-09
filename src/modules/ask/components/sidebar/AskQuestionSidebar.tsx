@@ -29,19 +29,19 @@ export default function AskQuestionSidebar() {
         }}>
         <Stack direction='row' justifyContent='space-between' alignItems='center'>
           <Typography variant='h6' component='div' sx={{ my: '10px' }}>
-            Can't find an answer?
+            Can't find an prompt?
           </Typography>
           {status === 'authenticated' ? (
             <MuiButton
               buttonVariant='outlined'
-              buttonText='Ask a question'
+              buttonText='Prompt AI'
               buttonLink='/ask'
               startIcon={<AddIcon />}
             />
           ) : (
             <MuiButton
               buttonVariant='outlined'
-              buttonText='Ask a question'
+              buttonText='Prompt AI'
               onClick={() => setSignupBenefitsDialog(true)}
             />
           )}

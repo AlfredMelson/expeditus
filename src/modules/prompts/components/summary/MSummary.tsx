@@ -7,7 +7,7 @@ import {
   MSummaryContentTags,
   MSummaryStats,
   MSummaryAuthorLocation,
-} from '@modules/questions/components/summary'
+} from '@modules/prompts/components/summary'
 
 import type { QueryClient } from '@tanstack/react-query'
 

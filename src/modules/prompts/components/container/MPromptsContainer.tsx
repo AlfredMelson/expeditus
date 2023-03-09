@@ -4,10 +4,10 @@ import Tabs from '@mui/material/Tabs'
 import Link from 'next/link'
 import { useSetRecoilState } from 'recoil'
 
-import { MTabSx } from '@modules/questions/components/mui'
-import { MSortInteresting } from '@modules/questions/components/tabbed-sort'
-import { ROUTES } from '@modules/questions/constants'
-import { sortQuestionTabIdAtom } from '@modules/questions/recoil'
+import { MTabSx } from '@modules/prompts/components/mui'
+import { MSortInteresting } from '@modules/prompts/components/tabbed-sort'
+import { ROUTES } from '@modules/prompts/constants'
+import { sortQuestionTabIdAtom } from '@modules/prompts/recoil'
 
 function a11yProps(index: number) {
   return {

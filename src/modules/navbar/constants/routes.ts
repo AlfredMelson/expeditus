@@ -1,7 +1,7 @@
 export const ROUTES = {
-  ADD_PRIMARY: [{ name: 'Ask a question', url: '/ask' }],
+  ADD_PRIMARY: [{ name: 'Prompt AI', url: '/ask' }],
   BOTTOM_NAVIGATION_MOBILE: [
-    { name: 'Questions', url: '/', value: 'questions' },
+    { name: 'Prompts', url: '/', value: 'prompts' },
     { name: 'Search', url: '/', value: 'search' },
     { name: 'Ask', url: '/ask', value: 'ask' },
     { name: 'Taxonomy', url: '/taxonomy', value: 'taxonomy' },
@@ -12,7 +12,7 @@ export const ROUTES = {
     { name: 'Alerts', url: '/' },
   ],
   NAVIGATION_PRIMARY: [
-    { name: 'Questions', url: '/' },
+    { name: 'Prompts', url: '/' },
     { name: 'Taxonomy', url: '/taxonomy' },
   ],
   NAVIGATION_SECONDARY: [
@@ -21,7 +21,7 @@ export const ROUTES = {
   ],
   SUPPORT_PRIMARY: [
     { name: 'Help', url: '/' },
-    { name: 'About Auxilium', url: '/' },
+    { name: 'About Expeditus', url: '/' },
   ],
   SUPPORT_SECONDARY: [{ name: 'Send Feedback', url: '/' }],
 }

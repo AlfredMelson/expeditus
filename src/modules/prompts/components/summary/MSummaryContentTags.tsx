@@ -9,7 +9,7 @@ import Grid from '@mui/material/Unstable_Grid2'
 import { useSetRecoilState } from 'recoil'
 
 import { MTagCard } from '@modules/common/components/tag-drawer'
-import { mobileDrawerOpenAtom } from '@modules/questions/recoil'
+import { mobileDrawerOpenAtom } from '@modules/prompts/recoil'
 
 interface IMSummaryContentTags {
   tag: { name: string }[]

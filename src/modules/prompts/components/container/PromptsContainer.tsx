@@ -7,9 +7,9 @@ import { useTheme } from '@mui/material/styles'
 import { AskQuestionSidebar, SortQuestionPreview } from '@modules/ask/components/sidebar'
 import { PageTitle } from '@modules/common/components'
 import { PrimaryContainer } from '@modules/common/components/container'
-import { QuestionSort } from '@modules/questions/components/tabbed-sort'
+import { PromptSort } from '@modules/prompts/components/tabbed-sort'
 
-export default function QuestionsContainer() {
+export default function PromptsContainer() {
   const frame = React.useRef<null | HTMLDivElement>(null)
   const theme = useTheme()
   const isSmUp = useMediaQuery(theme.breakpoints.up('sm'))
@@ -43,7 +43,7 @@ export default function QuestionsContainer() {
         left={
           <>
             <PageTitle titleText='Community Prompts' sx={{ ml: 1 }} />
-            <QuestionSort />
+            <PromptSort />
           </>
         }
         rightRef={frame}

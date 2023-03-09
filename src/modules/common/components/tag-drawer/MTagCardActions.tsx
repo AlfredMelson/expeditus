@@ -9,7 +9,7 @@ import { useSession } from 'next-auth/react'
 
 import { MTagCardActionsShare } from '@modules/common/components/tag-drawer'
 import { CapitalizeTag } from '@modules/common/func'
-import { MListItemTextSx } from '@modules/questions/components/mui'
+import { MListItemTextSx } from '@modules/prompts/components/mui'
 
 interface IMTagCardActions {
   tagName: string

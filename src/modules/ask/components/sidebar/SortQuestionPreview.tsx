@@ -19,15 +19,15 @@ export default function SortQuestionPreview() {
           boxShadow: '0px 20px 25px rgba(0, 0, 0, 0.1), 0px 10px 10px rgba(0, 0, 0, 0.04)',
         }}>
         <Typography variant='h6' sx={{ my: '10px' }}>
-          Selected question preview
+          Selected Prompt preview
         </Typography>
         <Typography variant='body1' sx={{ mb: '20px' }}>
-          This is the question title
+          This is the Prompt title
         </Typography>
         <Typography variant='body1' sx={{ mb: '20px' }}>
-          This is the question body
+          This is the Prompt body
         </Typography>
-        <MuiButton buttonVariant='outlined' buttonText='Link to question' buttonLink='/' />
+        <MuiButton buttonVariant='outlined' buttonText='Link to prompt' buttonLink='/' />
       </Card>
     </Fade>
   )
