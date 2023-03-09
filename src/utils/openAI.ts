@@ -1,7 +1,11 @@
 import { createParser } from 'eventsource-parser'
 
-import type { ChatMessage } from '@/chattypes'
 import type { ParsedEvent, ReconnectInterval } from 'eventsource-parser'
+
+interface ChatMessage {
+  role: 'system' | 'user' | 'assistant'
+  content: string
+}
 
 export const generatePayload = (apiKey: string, messages: ChatMessage[]): RequestInit => ({
   headers: {
